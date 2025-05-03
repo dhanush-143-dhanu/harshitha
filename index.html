@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!Harshitha</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top right, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-top: 80px;
+      text-shadow: 2px 2px #ff6f91;
+    }
+
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 50px;
+    }
+
+    .balloons {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 60px;
+      height: 80px;
+      background: radial-gradient(circle at 30% 30%, #ff6f91, #ff9a9e);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      animation: floatUp 10s linear infinite;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 20px;
+      background: #fff;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 30%; animation-delay: 2s; background: radial-gradient(circle at 30% 30%, #fbc2eb, #a6c1ee); }
+    .balloon:nth-child(3) { left: 50%; animation-delay: 4s; background: radial-gradient(circle at 30% 30%, #fad0c4, #ffd1ff); }
+    .balloon:nth-child(4) { left: 70%; animation-delay: 1s; background: radial-gradient(circle at 30% 30%, #ffecd2, #fcb69f); }
+    .balloon:nth-child(5) { left: 90%; animation-delay: 3s; background: radial-gradient(circle at 30% 30%, #cfd9df, #e2ebf0); }
+
+    /* Optional: Fade in on load */
+    body {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 10; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎂 Happy Birthday! 🎉</h1>
+  <p>Wishing you a day filled with love, laughter, and unforgettable memories!</p>
+
+  <div class="balloons">
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+  </div>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+</body>
+</html>
